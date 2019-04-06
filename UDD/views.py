@@ -4,7 +4,7 @@ import openpyxl
 
 def index(request):
     if "GET" == request.method:
-        return render(request, 'UDD/index.html', {})
+        return render(request, 'UDD/index.html',)
     else:
         excel_file = request.FILES["excel_file"]
 
