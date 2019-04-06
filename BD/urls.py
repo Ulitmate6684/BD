@@ -20,20 +20,12 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 ]
 
-from django.conf.urls import url
 
-from UDD import views
-
-app_name = "UDD"
-
-urlpatterns = [
-    url('', views.index, name='index'),
-]
 
 from django.contrib import admin
 from django.conf.urls import url, include
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('', include('BD.urls', namespace="UDD")),
+    url('', include('UDD.urls', namespace="UDD")),
 ]
