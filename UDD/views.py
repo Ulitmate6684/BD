@@ -4,7 +4,7 @@ import openpyxl
 
 def index(request):
     if "GET" == request.method:
-        return render(request, 'myapp/index.html', {})
+        return render(request, 'UDD/index.html', {})
     else:
         excel_file = request.FILES["excel_file"]
 
@@ -25,4 +25,4 @@ def index(request):
                 row_data.append(str(cell.value))
             excel_data.append(row_data)
 
-        return render(request, 'myapp/index.html', {"excel_data":excel_data})
+        return render(request, 'UDD/index.html', {"excel_data":excel_data})
